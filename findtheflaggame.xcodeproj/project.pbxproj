@@ -11,6 +11,8 @@
 		E4454A45298DD84E007B4CEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4454A44298DD84E007B4CEE /* ContentView.swift */; };
 		E4454A47298DD850007B4CEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4454A46298DD850007B4CEE /* Assets.xcassets */; };
 		E4454A4A298DD850007B4CEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4454A49298DD850007B4CEE /* Preview Assets.xcassets */; };
+		E4454A51298DDB70007B4CEE /* flagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4454A50298DDB70007B4CEE /* flagImage.swift */; };
+		E4454A53298DDB8C007B4CEE /* structCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4454A52298DDB8C007B4CEE /* structCountry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E4454A44298DD84E007B4CEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4454A46298DD850007B4CEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4454A49298DD850007B4CEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4454A50298DDB70007B4CEE /* flagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flagImage.swift; sourceTree = "<group>"; };
+		E4454A52298DDB8C007B4CEE /* structCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structCountry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				E4454A42298DD84E007B4CEE /* findtheflaggameApp.swift */,
 				E4454A44298DD84E007B4CEE /* ContentView.swift */,
+				E4454A50298DDB70007B4CEE /* flagImage.swift */,
+				E4454A52298DDB8C007B4CEE /* structCountry.swift */,
 				E4454A46298DD850007B4CEE /* Assets.xcassets */,
 				E4454A48298DD850007B4CEE /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				E4454A45298DD84E007B4CEE /* ContentView.swift in Sources */,
 				E4454A43298DD84E007B4CEE /* findtheflaggameApp.swift in Sources */,
+				E4454A51298DDB70007B4CEE /* flagImage.swift in Sources */,
+				E4454A53298DDB8C007B4CEE /* structCountry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
