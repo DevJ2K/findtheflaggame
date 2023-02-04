@@ -8,79 +8,115 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var rep1: String = "Reponse 1"
-    @State private var rep2: String = "Reponse 2"
-    @State private var rep3: String = "Reponse 3"
-    @State private var rep4: String = "Reponse 4"
+    
+    @State private var currentFlag: String = "france"
+    
+    @State private var goodOrBad: String = " "
+    
+    @State private var rep1: String = "France"
+    @State private var rep2: String = "Spain"
+    @State private var rep3: String = "United States"
+    @State private var rep4: String = "Nigeria"
+    
+    @State private var imgBorder = Color(.white)
+    @State private var bg1 = Color("skyblue")
+    @State private var bg2 = Color("skyblue")
+    @State private var bg3 = Color("skyblue")
+    @State private var bg4 = Color("skyblue")
+    
+    
+    
     
     
     var body: some View {
+        
         VStack {
-            Text("Which country is ?")
+            Text(goodOrBad)
+                .font(.largeTitle)
+                .bold()
+                .foregroundColor(goodOrBad == "Bonne Réponse !" ? .green : .red)
+                .padding()
+            
+            Text("Quel est ce pays ?")
                 .font(.title)
                 .italic()
                 .bold()
             
-//            flagImage(country: allCountry.randomElement()!)
-//            flagImage(country: "brazil")
-            Rectangle()
-                .frame(width: 290, height: 200)
-                .foregroundColor(.blue)
+            AsyncImage(url: URL(string: "https://countryflagsapi.com/png/\(currentFlag.lowercased())")) { image in
+                      image
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+
+                  } placeholder: {
+                      Color.primary
+                  }
+                  .frame(width: 230, height: 160)
+                  .padding()
+                  
+                  .border(imgBorder)
+//                  .cornerRadius(20)
                 .padding()
+
             
-            VStack(spacing: 8){
-                HStack(spacing: 8){
+            VStack(spacing: 12){
+                HStack(spacing: 12){
                     Button{
+                        verifyAnswer(answerClick: rep1, numRep: 1)
                         print("Rep 1")
                     } label: {
                         Text(rep1)
                             .foregroundColor(Color(.white))
                             .font(.headline)
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, minHeight: 40, idealHeight: 40)
+                            
                             .padding()
-                            .background(.blue)
+                            .background(bg1)
                             .cornerRadius(10)
                     }
                     
                     Button{
+                        verifyAnswer(answerClick: rep2, numRep: 2)
                         print("Rep 2")
                     } label: {
                         Text(rep2)
                             .foregroundColor(Color(.white))
                             .font(.headline)
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, minHeight: 40, idealHeight: 40)
                             .padding()
-                            .background(.blue)
+                            .background(bg2)
                             .cornerRadius(10)
                     }
                 }
                 
-                HStack{
+                HStack(spacing: 12){
                     Button{
+                        verifyAnswer(answerClick: rep3, numRep: 3)
                         print("Rep 3")
                     } label: {
                         Text(rep3)
                             .foregroundColor(Color(.white))
                             .font(.headline)
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, minHeight: 40, idealHeight: 40)
                             .padding()
-                            .background(.blue)
+                            .background(bg3)
                             .cornerRadius(10)
                     }
                     
                     Button{
+                        verifyAnswer(answerClick: rep4, numRep: 4)
                         print("Rep 4")
                     } label: {
                         Text(rep4)
                             .foregroundColor(Color(.white))
                             .font(.headline)
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, minHeight: 40, idealHeight: 40)
                             .padding()
-                            .background(.blue)
+                            .background(bg4)
                             .cornerRadius(10)
                     }
                 }
             }
+            .padding()
             
             Button{
                 generateCountry()
@@ -90,7 +126,7 @@ struct ContentView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(.red)
+                    .background(.purple)
                     .cornerRadius(10)
             }
             
@@ -98,18 +134,69 @@ struct ContentView: View {
         .padding()
     }
     
-    private func generateCountry() {
-        let countryAnswer: [String] = []
-        let goodAnswer = ""
+    private func generateCountry() -> String {
+        var countryAnswer: [String] = []
+        
         
         while countryAnswer.count < 4 {
-//            if allCountry.randomElement()! not in
+            let randomCountry = allCountry.randomElement()!
+            if !countryAnswer.contains(randomCountry) {
+                countryAnswer.append(randomCountry)
+            }
+            
         }
+        var goodAnswer = countryAnswer.randomElement()!.lowercased()
         print("Yo")
-        self.rep1 = "Coucou"
-        self.rep2 = "Ahaha"
-        self.rep3 = "Mdrrrr"
-        self.rep4 = "Ptdrrr"
+        
+        self.goodOrBad = " "
+        
+        self.rep1 = countryAnswer.remove(at: Int.random(in: 0..<countryAnswer.count))
+        self.rep2 = countryAnswer.remove(at: Int.random(in: 0..<countryAnswer.count))
+        self.rep3 = countryAnswer.remove(at: Int.random(in: 0..<countryAnswer.count))
+        self.rep4 = countryAnswer.remove(at: Int.random(in: 0..<countryAnswer.count))
+        
+        self.imgBorder = Color(.white)
+        
+        self.bg1 = Color("skyblue")
+        self.bg2 = Color("skyblue")
+        self.bg3 = Color("skyblue")
+        self.bg4 = Color("skyblue")
+        
+        self.currentFlag = goodAnswer
+        
+        return goodAnswer
+        
+    }
+    
+    private func verifyAnswer(answerClick: String, numRep: Int) {
+        if answerClick.lowercased() == currentFlag {
+            self.goodOrBad = "Bonne Réponse !"
+            self.imgBorder = Color("green")
+            if numRep == 1 {
+                self.bg1 = Color("green")
+            } else if numRep == 2 {
+                self.bg2 = Color("green")
+            } else if numRep == 3 {
+                self.bg3 = Color("green")
+            } else if numRep == 4 {
+                self.bg4 = Color("green")
+            }
+            
+            
+            
+        } else {
+            self.goodOrBad = "Mauvaise Réponse !"
+            self.imgBorder = Color(.red)
+            if numRep == 1 {
+                self.bg1 = Color(.red)
+            } else if numRep == 2 {
+                self.bg2 = Color(.red)
+            } else if numRep == 3 {
+                self.bg3 = Color(.red)
+            } else if numRep == 4 {
+                self.bg4 = Color(.red)
+            }
+        }
     }
 }
 

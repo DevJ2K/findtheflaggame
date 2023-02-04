@@ -13,16 +13,18 @@
 		E4454A4A298DD850007B4CEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4454A49298DD850007B4CEE /* Preview Assets.xcassets */; };
 		E4454A51298DDB70007B4CEE /* flagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4454A50298DDB70007B4CEE /* flagImage.swift */; };
 		E4454A53298DDB8C007B4CEE /* structCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4454A52298DDB8C007B4CEE /* structCountry.swift */; };
+		E44A9C76298F0EB800FBA17A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A9C75298F0EB800FBA17A /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E4454A3F298DD84E007B4CEE /* findtheflaggame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findtheflaggame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4454A3F298DD84E007B4CEE /* Find The Flag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find The Flag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4454A42298DD84E007B4CEE /* findtheflaggameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findtheflaggameApp.swift; sourceTree = "<group>"; };
 		E4454A44298DD84E007B4CEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4454A46298DD850007B4CEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4454A49298DD850007B4CEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4454A50298DDB70007B4CEE /* flagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flagImage.swift; sourceTree = "<group>"; };
 		E4454A52298DDB8C007B4CEE /* structCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structCountry.swift; sourceTree = "<group>"; };
+		E44A9C75298F0EB800FBA17A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +49,7 @@
 		E4454A40298DD84E007B4CEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4454A3F298DD84E007B4CEE /* findtheflaggame.app */,
+				E4454A3F298DD84E007B4CEE /* Find The Flag.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +63,7 @@
 				E4454A52298DDB8C007B4CEE /* structCountry.swift */,
 				E4454A46298DD850007B4CEE /* Assets.xcassets */,
 				E4454A48298DD850007B4CEE /* Preview Content */,
+				E44A9C75298F0EB800FBA17A /* SplashScreenView.swift */,
 			);
 			path = findtheflaggame;
 			sourceTree = "<group>";
@@ -90,7 +93,7 @@
 			);
 			name = findtheflaggame;
 			productName = findtheflaggame;
-			productReference = E4454A3F298DD84E007B4CEE /* findtheflaggame.app */;
+			productReference = E4454A3F298DD84E007B4CEE /* Find The Flag.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,6 +148,7 @@
 			files = (
 				E4454A45298DD84E007B4CEE /* ContentView.swift in Sources */,
 				E4454A43298DD84E007B4CEE /* findtheflaggameApp.swift in Sources */,
+				E44A9C76298F0EB800FBA17A /* SplashScreenView.swift in Sources */,
 				E4454A51298DDB70007B4CEE /* flagImage.swift in Sources */,
 				E4454A53298DDB8C007B4CEE /* structCountry.swift in Sources */,
 			);
@@ -275,6 +279,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"findtheflaggame/Preview Content\"";
+				DEVELOPMENT_TEAM = UXC33S4TT6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -288,7 +293,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = j2kcorp.findtheflaggame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Find The Flag";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"findtheflaggame/Preview Content\"";
+				DEVELOPMENT_TEAM = UXC33S4TT6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -316,7 +322,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = j2kcorp.findtheflaggame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Find The Flag";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

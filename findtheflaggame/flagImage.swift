@@ -12,16 +12,19 @@ struct flagImage: View {
     var country: String
     
     var body: some View {
-        AsyncImage(url: URL(string: "https://countryflagsapi.com/png/\(country)")) { image in
+        AsyncImage(url: URL(string: "https://countryflagsapi.com/png/\(country.lowercased())")) { image in
                   image
                       .resizable()
                       .aspectRatio(contentMode: .fit)
 
               } placeholder: {
-                  Color.gray
+                  Color.primary
               }
-              .frame(width: 250, height: 250)
+              .frame(width: 230, height: 160)
               .padding()
+              
+              .border(.primary)
+//              .background(Color(.white))
     }
 }
 
